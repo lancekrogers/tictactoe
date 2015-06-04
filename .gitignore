@@ -1,1 +1,4 @@
 .direnv/
+.envrc
+tic-tac-toe.slides.md
+research.txt
