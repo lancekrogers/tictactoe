@@ -1,5 +1,6 @@
 import sys
 import math # math.factorial()
+import numpy as np
 
 
 def debug_print(information):
@@ -11,6 +12,7 @@ first_row = input()
 second_row = input()
 third_row = input()
 
+
 # print out the inputs you're getting
 debug_print(team)
 debug_print(first_row)
@@ -18,24 +20,29 @@ debug_print(second_row)
 debug_print(third_row)
 
 
-class Decisions:
+
     # outputs the contents of my board
     # board == incoming board plus my coordinates
 
-    def __init__(self):
-        self.team = input()
-        self.first_row = input()
-        self.second_row = input()
-        self.third_row = input
+team = input()
+first_row = input()
+second_row = input()
+third_row = input()
+almost_board = [[first_row], [second_row], [third_row]]
+board = np.array(almost_board)
 
 
-    def get_team(self):
-        if self.input == 'X'
-            self.team == 'X'
-        else:
-            self.team == 'O'
-    def get_board(**args)
-        pass
 
-    def change_stratagy():
-        pass
+def get_team(team):
+    if team == 'X'
+        my_bot_team == 'X'
+    else:
+        my_bot_team == 'O'
+
+def get_board(first_row, second_row, third_row):
+    almost_board = [[first_row], [second_row], [third_row]]
+    board = np.array(almost_board)
+    return board
+
+def change_stratagy():
+    pass
