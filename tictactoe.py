@@ -64,31 +64,6 @@ def game_logic(board, team):
             print('1 1')
 
 
-        # diaganol blocks and wins second
-        elif I and A != '_' and C == '_' or B and G != '_' and C == '_':
-            print('2 0')
-
-        elif F and D != '_' and C == '_':
-            print('2 0')
-
-        elif I and D != '_' and B == '_' or C and G != '_' and B == '_':
-            print('0 0')
-
-        elif E and A != '_' and B == '_':
-            print('0 0')
-
-        #elif C and I != '_' and A == '_' or B and E != '_' and A == '_':
-        #    print('0 2')
-
-        #elif D and H != '_' and A == '_':
-        #    print('0 2')
-
-        #elif B and I != '_' and D == '_' or A and H != '_' and D == '_':
-        #    print('2 2')
-
-        #elif C and F != '_' and D == '_':
-        #    print('2 2')
-
 
 
 
@@ -109,6 +84,34 @@ def game_logic(board, team):
 
 
 
+
+        # diaganol blocks and wins second
+        elif I and A != '_' and C == '_' or B and G != '_' and C == '_':
+            print('2 0')
+
+        elif F and D != '_' and C == '_':
+            print('2 0')
+
+        elif I and D != '_' and B == '_' or C and G != '_' and B == '_':
+            print('0 0')
+
+        elif E and A != '_' and B == '_':
+            print('0 0')
+
+        elif C and I != '_' and A == '_' or B and E != '_' and A == '_':
+           print('0 2')
+
+        elif D and H != '_' and A == '_':
+            print('0 2')
+
+        elif B and I != '_' and D == '_' or A and H != '_' and D == '_':
+            print('2 2')
+
+        elif C and F != '_' and D == '_':
+            print('2 2')
+
+
+        # normal game play
         elif A and B != '_' and E == '_':
             print ('0 1')
 
