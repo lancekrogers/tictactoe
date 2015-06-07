@@ -54,7 +54,8 @@ def game_logic(board, team):
 
 
     if team not in board:
-        # first game move
+
+        # middle blocks and wins first
 
         if A and C != '_' and I == '_' or E and F != '_' and I == '_':
             print('1 1')
@@ -62,8 +63,39 @@ def game_logic(board, team):
         elif B and D != '_' and I == '_' or G and H != '_' and I == '_':
             print('1 1')
 
-        elif A and B != '_' and E == "_":
-            print('0 1')
+
+        # diaganol blocks and wins second
+        elif I and A != '_' and C == '_' or B and G != '_' and C == '_':
+            print('2 0')
+
+        elif F and D != '_' and C == '_':
+            print('2 0')
+
+        elif I and D != '_' and B == '_' or C and G != '_' and B == '_':
+            print('0 0')
+
+        elif E and A != '_' and B == '_':
+            print('0 0')
+
+        #elif C and I != '_' and A == '_' or B and E != '_' and A == '_':
+        #    print('0 2')
+
+        #elif D and H != '_' and A == '_':
+        #    print('0 2')
+
+        #elif B and I != '_' and D == '_' or A and H != '_' and D == '_':
+        #    print('2 2')
+
+        #elif C and F != '_' and D == '_':
+        #    print('2 2')
+
+
+
+
+        # side blocks and wins third
+
+        elif B and C != '_' and G == '_' or H and I != '_' and G == '_':
+            print('1 0')
 
         elif E and I != '_' and F == '_' or C and D != '_' and F == '_':
             print('2 1')
@@ -71,7 +103,7 @@ def game_logic(board, team):
         elif I and F != '_' and E == '_' or B and A != '_' and E == '_':
             print('0 1')
 
-        elif G and I != '_' and H == '_':
+        elif G and I != '_' and H == '_' or A and D != '_' and H == '_':
             print('1 2')
 
 
