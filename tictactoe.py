@@ -37,7 +37,7 @@ board = np.array(almost_board)
 
 
 
-def hierarchy(board, team):
+def game_logic(board, team):
     # logic for bot choice
     # functions as a hierarchy of move choices
     A = (board.flat[0][2])
@@ -51,36 +51,87 @@ def hierarchy(board, team):
     I = (board.flat[1][1])
 
 
+
+
     if team not in board:
         # first game move
-        if '_' == A:
-            print('0 2')
-        elif '_' == B:
-            print('0 0')
-        elif '_' == C:
-            print ('2 0')
-        elif '_' == C:
-            print('2 0')
-        elif '_' == D:
-            print('2 2')
-        elif '_' == B:
-            print('0 0')
+
+        if A and C != '_' and I == '_' or E and F != '_' and I == '_':
+            print('1 1')
+
+        elif B and D != '_' and I == '_' or G and H != '_' and I == '_':
+            print('1 1')
+
+        elif A and B != '_' and E == "_":
+            print('0 1')
+
+        elif E and I != '_' and F == '_' or C and D != '_' and F == '_':
+            print('2 1')
+
+        elif I and F != '_' and E == '_' or B and A != '_' and E == '_':
+            print('0 1')
+
+        elif G and I != '_' and H == '_':
+            print('1 2')
+
+
+
+
+        elif A and B != '_' and E == '_':
+            print ('0 1')
+
+        elif B and C != '_' and G == '_':
+            print('1 0')
+
+        elif C and D != '_' and F == '_':
+            print('2 1')
+
+
+        elif A and D != '_' and H == '_':
+            print('1 2')
+
+
         elif '_' == A:
             print('0 2')
-        elif '_' == E:
-            print('0 1')
-        elif '_' == F:
-            print('2 1')
-        elif '_' == G:
-            print('1 0')
-        elif '_' == H:
-            print('1 2')
+
+        elif '_' == B:
+            print('0 0')
+
+
         elif '_' == D:
             print('2 2')
-        elif '_' == I:
-            print('1 1')
+
+
+        elif '_' == C:
+            print ('2 0')
+
+        elif '_' == B:
+            print('0 0')
+
+        elif '_' == A:
+            print('0 2')
+
+        elif '_' == E:
+            print('0 1')
+
         elif '_' == F:
             print('2 1')
+
+        elif '_' == G:
+            print('1 0')
+
+        elif '_' == H:
+            print('1 2')
+
+        elif '_' == D:
+            print('2 2')
+
+        elif '_' == I:
+            print('1 1')
+
+        elif '_' == F:
+            print('2 1')
+
         elif '_' == G:
             print('1 0')
 
@@ -91,5 +142,7 @@ def hierarchy(board, team):
 
 
 def main():
-    hierarchy(board, team)
+    game_logic(board, team)
+
+
 main()
